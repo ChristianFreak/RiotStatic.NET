@@ -119,16 +119,12 @@ namespace RiotStatic.StaticApi
                 return Respone.Content;                           
             }
         }
-        public string DefineUrl(string UrlExtension, string CS = null, string IS = null)
+        public string DefineUrl(string UrlExtension, string DataStyle = null)
         {
             string Url = "/lol/static-data/v3/" + UrlExtension + "?api_key=" + Token;
-            if (CS != null)
+            if (DataStyle != null)
             {
-                Url = Url + "&tags=" + CS;
-            }
-            if(IS != null)
-            {
-                Url = Url + "&tags=" + IS;
+                Url = Url + "&tags=" + DataStyle;
             }
             return Url;
         }
