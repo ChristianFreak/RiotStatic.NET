@@ -104,7 +104,7 @@ namespace RiotStatic.StaticApi
             return await Versions.ReadAsAsync<List<string>>();
         }
 
-        public async Task<HttpContent> GetRequest(string Region, string Url)
+        private async Task<HttpContent> GetRequest(string Region, string Url)
         {
             using (HttpClient Client = new HttpClient(new HttpClientHandler()
             {
@@ -119,7 +119,7 @@ namespace RiotStatic.StaticApi
                 return Respone.Content;                           
             }
         }
-        public string DefineUrl(string UrlExtension, string DataStyle = null)
+        private string DefineUrl(string UrlExtension, string DataStyle = null)
         {
             string Url = "/lol/static-data/v3/" + UrlExtension + "?api_key=" + Token;
             if (DataStyle != null)
