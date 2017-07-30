@@ -5,7 +5,7 @@ using RiotStatic.StaticApi.StaticMasteries;
 using RiotStatic.StaticApi.StaticRealms;
 using RiotStatic.StaticApi.StaticRunes;
 using RiotStatic.StaticApi.StaticSummonerSpells;
-using System;
+using System; 
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
