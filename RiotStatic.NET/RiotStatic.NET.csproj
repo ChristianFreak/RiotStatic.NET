@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93D2E7F2-A743-47AA-8E0E-9CC288702F6F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RiotStatic</RootNamespace>
+    <AssemblyName>RiotStatic.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticApi\StaticApiCaller.cs" />
+    <Compile Include="StaticApi\StaticChampions\StaticBlock.cs" />
+    <Compile Include="StaticApi\StaticChampions\StaticBlockItem.cs" />
+    <Compile Include="StaticApi\StaticChampions\StaticChampion.cs" />
+    <Compile Include="StaticApi\StaticChampions\StaticChampionList.cs" />
+    <Compile Include="StaticApi\StaticChampions\StaticChampionSpell.cs" />
+    <Compile Include="StaticApi\StaticChampions\StaticInfo.cs" />
+    <Compile Include="StaticApi\StaticEnums.cs" />
+    <Compile Include="StaticApi\StaticLevelTip.cs" />
+    <Compile Include="StaticApi\StaticChampions\StaticPassive.cs" />
+    <Compile Include="StaticApi\StaticChampions\StaticRecommended.cs" />
+    <Compile Include="StaticApi\StaticChampions\StaticSkin.cs" />
+    <Compile Include="StaticApi\StaticProfileIcons\StaticProfileIconData.cs" />
+    <Compile Include="StaticApi\StaticProfileIcons\StaticProfileIconDetails.cs" />
+    <Compile Include="StaticApi\StaticRealms\StaticRealm.cs" />
+    <Compile Include="StaticApi\StaticRunes\StaticMetaData.cs" />
+    <Compile Include="StaticApi\StaticRunes\StaticRune.cs" />
+    <Compile Include="StaticApi\StaticRunes\StaticRuneList.cs" />
+    <Compile Include="StaticApi\StaticRunes\StaticRuneStats.cs" />
+    <Compile Include="StaticApi\StaticSpellVars.cs" />
+    <Compile Include="StaticApi\StaticChampions\StaticStats.cs" />
+    <Compile Include="StaticApi\StaticImage.cs" />
+    <Compile Include="StaticApi\StaticItems\StaticGold.cs" />
+    <Compile Include="StaticApi\StaticItems\StaticGroup.cs" />
+    <Compile Include="StaticApi\StaticItems\StaticInventoryDataStats.cs" />
+    <Compile Include="StaticApi\StaticItems\StaticItem.cs" />
+    <Compile Include="StaticApi\StaticItems\StaticItemList.cs" />
+    <Compile Include="StaticApi\StaticItems\StaticItemTree.cs" />
+    <Compile Include="StaticApi\StaticMaps\StaticMapData.cs" />
+    <Compile Include="StaticApi\StaticMaps\StaticMapDetails.cs" />
+    <Compile Include="StaticApi\StaticMasteries\StaticMastery.cs" />
+    <Compile Include="StaticApi\StaticMasteries\StaticMasteryList.cs" />
+    <Compile Include="StaticApi\StaticMasteries\StaticMasteryTree.cs" />
+    <Compile Include="StaticApi\StaticMasteries\StaticMasteryTreeItem.cs" />
+    <Compile Include="StaticApi\StaticMasteries\StaticMasteryTreeList.cs" />
+    <Compile Include="StaticApi\StaticSummonerSpells\StaticSummonerSpell.cs" />
+    <Compile Include="StaticApi\StaticSummonerSpells\StaticSummonerSpellList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
