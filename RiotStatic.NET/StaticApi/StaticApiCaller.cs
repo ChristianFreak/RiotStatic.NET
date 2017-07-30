@@ -112,7 +112,6 @@ namespace RiotStatic.StaticApi
             }))
             {
                 Client.BaseAddress = new Uri("https://" + Region.ToLower() + ".api.riotgames.com/api");
-                Console.WriteLine(Client.BaseAddress);
                 Client.DefaultRequestHeaders.Accept.Clear();
                 Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
